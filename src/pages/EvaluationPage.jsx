@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Upload, Beaker, AlertCircle, Activity, Info, FileCode2, ArrowRight } from 'lucide-react';
+import { Upload, Beaker, AlertCircle, Activity, Info, FileCode2, ArrowRight, Hexagon } from 'lucide-react';
 import MoleculeRender from '../components/MoleculeRender';
 
 export default function EvaluationPage() {
@@ -237,7 +237,7 @@ export default function EvaluationPage() {
                       <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">Model Uncertainty</p>
                       <p className="text-xl font-bold text-gray-800 font-mono">{evaluationResult.uncertainty}</p>
                     </div>
-                    <div className={`w-3 h-3 rounded-full ${evaluationResult.uncertainty < 0.2 ? 'bg-emerald-500' : evaluationResult.uncertainty < 0.4 ? 'bg-amber-400' : 'bg-rose-500'}`}></div>
+                    <div className={`w-3 h-3 rounded-full ${parseFloat(evaluationResult.uncertainty) < 0.2 ? 'bg-emerald-500' : parseFloat(evaluationResult.uncertainty) < 0.4 ? 'bg-amber-400' : 'bg-rose-500'}`}></div>
                   </div>
                 </div>
 
