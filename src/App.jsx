@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, NavLink, Link, useNavigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, NavLink, Link, useNavigate } from 'react-router-dom';
 import { Activity, LogOut, User as UserIcon, Shield } from 'lucide-react';
 
 import { AuthProvider, useAuth } from './context/AuthContext';
@@ -112,7 +112,7 @@ function Footer() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AuthProvider>
         <Navbar />
         <main>
@@ -135,7 +135,7 @@ function App() {
         </main>
         <Footer />
       </AuthProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
